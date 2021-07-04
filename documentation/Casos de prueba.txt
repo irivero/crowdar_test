@@ -4,7 +4,7 @@
 ## 001: Autenticación (flujo básico)
 Prueba del flujo básico de autenticación con usuario y contraseña válidos. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "standard_user" en el campo Username. 
+1. Introducir el nombre de usuario "standard_user" en el campo Username. 
 2. Introducir la contraseña “secret_sauce” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
@@ -15,7 +15,7 @@ Resultados esperados
 ## 002: Autenticación (usuario bloqueado)
 Prueba del flujo básico de autenticación con un usuario en estado bloqueado. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "locked_out_user" en el campo Username. 
+1. Introducir el nombre de usuario "locked_out_user" en el campo Username. 
 2. Introducir la contraseña “secret_sauce” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
@@ -38,7 +38,7 @@ Situación actual:
 ## 004: Autenticación (contraseña vacía)
 Prueba del flujo básico de autenticación con el campo Password vacío. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "locked_out_user" en el campo Username.  
+1. Introducir el nombre de usuario "locked_out_user" en el campo Username.  
 2. Hacer click en el botón Login
 Resultados esperados
        Se muestra un mensaje de error indicando que la contraseña es requerida
@@ -68,20 +68,20 @@ Resultados esperados
 ## 007: Autenticación (problemas de performance)
 Prueba del flujo básico de autenticación con problemas de performance en el sistema. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "performance_glitch_user" en el campo Username. 
+1. Introducir el nombre de usuario "performance_glitch_user" en el campo Username. 
 2. Introducir la contraseña “secret_sauce” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
        Se muestra un loading durante el proceso de verificación de las credenciales, seguidamente el usuario es redirigido a la página principal de la aplicación 
 Situación actual:
-No se está mostrando el componente de loading durante la verificación de las credenciales, por lo que da la idea de que el sistema no funciona por algunos segundos.
+	No se está mostrando el componente de loading durante la verificación de las credenciales, por lo que da la idea de que el sistema no funciona por algunos segundos.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 ## 008: Autenticación (nombre de usuario incorrecto)
 Prueba del flujo básico de autenticación con usuario incorrecto. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "secret_sauce" en el campo Username. 
+1. Introducir el nombre de usuario "secret_sauce" en el campo Username. 
 2. Introducir la contraseña “secret_sauce” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
@@ -92,7 +92,7 @@ Resultados esperados
 ## 009: Autenticación (contraseña incorrecta)
 Prueba del flujo básico de autenticación con contraseña incorrecta. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "standard_user" en el campo Username. 
+1. Introducir el nombre de usuario "standard_user" en el campo Username. 
 2. Introducir la contraseña “standard_user” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
