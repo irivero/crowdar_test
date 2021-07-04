@@ -1,4 +1,5 @@
 # Casos de prueba
+=========================================================================================================================================
 
 ## 001: Autenticación (flujo básico)
 Prueba del flujo básico de autenticación con usuario y contraseña válidos. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
@@ -9,6 +10,8 @@ Pasos
 Resultados esperados
        El usuario es redirigido a la página principal de la aplicación 
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 002: Autenticación (usuario bloqueado)
 Prueba del flujo básico de autenticación con un usuario en estado bloqueado. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
@@ -17,7 +20,9 @@ Pasos
 3. Hacer click en el botón Login
 Resultados esperados
        Se muestra un mensaje de error indicando el bloqueo del usuario
-	
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 003: Autenticación (nombre de usuario vacío)
 Prueba del flujo básico de autenticación con el campo Username vacío. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
@@ -27,6 +32,8 @@ Resultados esperados
        Se muestra un mensaje de error indicando que el nombre de usuario es requerido
 Situación actual:
 	Se está marcando como incorrecto el campo Password, pero solo debería marcarse el de Username que es donde ocurre el problema.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 ## 004: Autenticación (contraseña vacía)
 Prueba del flujo básico de autenticación con el campo Password vacío. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
@@ -38,6 +45,8 @@ Resultados esperados
 Situación actual:
 	Se está marcando como incorrecto el campo Username, pero solo debería marcarse el de Password que es donde ocurre el problema.
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 005: Autenticación (con credenciales vacías)
 Prueba del flujo básico de autenticación con las credenciales vacías. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
@@ -45,12 +54,17 @@ Pasos
 Resultados esperados
        Se muestra un mensaje de error indicando que el nombre de usuario es requerido
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 006: Autenticación (Redirección a la vista de autenticación)
 Prueba de la verificación de permisos si el usuario no está autenticado. (NOTA: en el navegador no debe existir ninguna sesión activa)
 Pasos
 1. Navegar a la URL https://www.saucedemo.com/inventory.html  
 Resultados esperados
        El usuario es redirigido a la página de autenticación mostrando un mensaje que indica al usuario que solo tiene acceso a la URL indicada si se autentica
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 007: Autenticación (problemas de performance)
 Prueba del flujo básico de autenticación con problemas de performance en el sistema. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
@@ -62,6 +76,8 @@ Resultados esperados
 Situación actual:
 No se está mostrando el componente de loading durante la verificación de las credenciales, por lo que da la idea de que el sistema no funciona por algunos segundos.
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 008: Autenticación (nombre de usuario incorrecto)
 Prueba del flujo básico de autenticación con usuario incorrecto. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
@@ -70,6 +86,8 @@ Pasos
 3. Hacer click en el botón Login
 Resultados esperados
        Se muestra un mensaje de error indicando que no se encontró ningún usuario con las credenciales proporcionadas 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 ## 009: Autenticación (contraseña incorrecta)
 Prueba del flujo básico de autenticación con contraseña incorrecta. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
@@ -80,12 +98,16 @@ Pasos
 Resultados esperados
        Se muestra un mensaje de error indicando que no se encontró ningún usuario con las credenciales proporcionadas 
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 ## 010: Autenticación (Despliegue de la vista de autenticación)
 Prueba del flujo básico 
 Pasos
 1. Introducir en el navegador la URL https://www.saucedemo.com/
  Resultados esperados
 Se debe mostrar la vista de autenticación con los campos para introducir el usuario y la contraseña, se debe mostrar el botón de autenticación. Además debe aparecer el logo de la aplicación en la parte superior
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 ## 011: Autenticación – Remover mensaje de error
 Prueba del flujo básico de autenticación con las credenciales vacías. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
