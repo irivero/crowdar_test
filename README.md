@@ -16,5 +16,13 @@
 
 `versions:update-properties`
 
-## update configurations in 
+## Update configurations in 
 [src/main/resources/test_environment.properties](src/main/resources/test_environment.properties)
+
+#### Browser type
+`#browser=chrome`
+
+`browser=firefox` -> active
+
+#### Headless
+`headless=false`
