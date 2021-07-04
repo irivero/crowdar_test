@@ -5,12 +5,9 @@
 `mvn test`
 
 ## Generate report
+## You can use IIS for deploy the result locally
 
 `mvn allure:report`
-
-## or
-
-`allure serve` 
 
 ## Check for dependecy updates
 
