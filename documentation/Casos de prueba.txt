@@ -81,7 +81,7 @@ No se está mostrando el componente de loading durante la verificación de las c
 ## 008: Autenticación (nombre de usuario incorrecto)
 Prueba del flujo básico de autenticación con usuario incorrecto. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir en nombre de usuario "standarduser" en el campo Username. 
+1. Introducir en nombre de usuario "secret_sauce" en el campo Username. 
 2. Introducir la contraseña “secret_sauce” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
@@ -93,7 +93,7 @@ Resultados esperados
 Prueba del flujo básico de autenticación con contraseña incorrecta. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "standard_user" en el campo Username. 
-2. Introducir la contraseña “secretsauce” en el campo Password. 
+2. Introducir la contraseña “standard_user” en el campo Password. 
 3. Hacer click en el botón Login
 Resultados esperados
        Se muestra un mensaje de error indicando que no se encontró ningún usuario con las credenciales proporcionadas 
