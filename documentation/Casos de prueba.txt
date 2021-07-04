@@ -66,7 +66,8 @@ Resultados esperados
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 ## 007: Autenticación (problemas de performance)
-Prueba del flujo básico de autenticación con problemas de performance en el sistema. El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
+Prueba del flujo básico de autenticación con problemas de performance en el sistema. 
+El usuario debe acceder a la URL donde está desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir el nombre de usuario "performance_glitch_user" en el campo Username. 
 2. Introducir la contraseña “secret_sauce” en el campo Password. 
