@@ -150,7 +150,7 @@ public class AuthenticationTests extends TestBase {
 
         try {          
 
-                typeCredentials(Environment.getProperties().username(),Environment.getProperties().password());
+                typeCredentials(Environment.getProperties().username_performance(),Environment.getProperties().password());
                 assertThat(loginPage.getLoading().isDisplayed()).isTrue();
 
                 /*synchronized (driver)

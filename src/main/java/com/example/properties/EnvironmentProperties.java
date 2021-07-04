@@ -15,6 +15,8 @@ public interface EnvironmentProperties extends Config {
 
     String username_locked();
 
+    String username_performance();
+
     String browser();
 
     Boolean headless();
