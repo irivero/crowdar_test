@@ -22,18 +22,20 @@ abstract class TestBase {
 
     protected WebDriver driver;
 
-
     @BeforeSuite
     public void setupSuite() {
-        WebDriverManager.chromedriver().setup();
-        //WebDriverManager.firefoxdriver().setup();
+        
+        if(Environment.getProperties().browser().toString().toLowerCase().equals("firefox")){
+            WebDriverManager.firefoxdriver().setup();
+        }else{
+            WebDriverManager.chromedriver().setup();
+        }
     }
 
     @BeforeClass
     public void setup() {
-
-        if(Environment.getProperties().browser() == "firefox"){
-
+        
+        if(Environment.getProperties().browser().toString().toLowerCase().equals("firefox")){          
 
             FirefoxOptions options = new FirefoxOptions();            
             if(Environment.getProperties().headless()){
@@ -52,14 +54,12 @@ abstract class TestBase {
         }     
 
         driver.manage().window().maximize();
-
     }
 
     @AfterClass
     public void teardown() {
         driver.quit();
-    }
-    
+    }    
 
     /**
 
@@ -84,11 +84,7 @@ abstract class TestBase {
 
         }catch(Exception e){
             e.printStackTrace(); 
-        }
-
-        
-    }
-
-   
+        }        
+    }   
 
 }
