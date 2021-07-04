@@ -9,7 +9,7 @@
 `mvn allure:report`
 
 ## Execute this for run test and generate the report 
-### Check WIKI for some examples
+### Check the WIKI for some examples
 
 `mvn clean test allure:report`
 
