@@ -5,7 +5,6 @@
 `mvn test`
 
 ## Generate report
-### You can use IIS for deploy the result locally
 
 `mvn allure:report`
 
@@ -17,5 +16,13 @@
 
 `versions:update-properties`
 
-## update configurations in 
-### src/main/resources/test_environment.properties
+## Update configurations in test_environment.properties
+[src/main/resources/test_environment.properties](src/main/resources/test_environment.properties)
+
+#### Browser type
+`#browser=chrome`
+
+`browser=firefox` -> active
+
+#### Headless
+`headless=false`
