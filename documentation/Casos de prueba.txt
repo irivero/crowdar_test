@@ -105,7 +105,8 @@ Prueba del flujo básico
 Pasos
 1. Introducir en el navegador la URL https://www.saucedemo.com/
  Resultados esperados
-Se debe mostrar la vista de autenticación con los campos para introducir el usuario y la contraseña, se debe mostrar el botón de autenticación. Además debe aparecer el logo de la aplicación en la parte superior
+Se debe mostrar la vista de autenticación con los campos para introducir el usuario y la contraseña, se debe mostrar el botón de autenticación. 
+Además debe aparecer el logo de la aplicación en la parte superior
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
