@@ -15,8 +15,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 abstract class TestBase {
 
@@ -24,39 +26,53 @@ abstract class TestBase {
 
     @BeforeSuite
     public void setupSuite() {
+        String browser = Environment.getProperties().browser().toString().toLowerCase();
+
+        switch (browser) {
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                break;
         
-        if(Environment.getProperties().browser().toString().toLowerCase().equals("firefox")){
-            WebDriverManager.firefoxdriver().setup();
-        }else{
-            WebDriverManager.chromedriver().setup();
-        }
+            default:
+                WebDriverManager.chromedriver().setup();
+                break;
+        }        
     }
 
-    @BeforeClass
+    /**
+
+     * This function will configure the browser for each suite
+     * We use switch structure because there are too many browsers to be added
+
+     */
+    @BeforeTest
     public void setup() {
+
+        String browser = Environment.getProperties().browser().toString().toLowerCase();
+
+        switch (browser) {
+            
+            case "firefox":
+                FirefoxOptions options = new FirefoxOptions();            
+                if(Environment.getProperties().headless()){
+                    options.addArguments("--headless");
+                }
+                driver = new FirefoxDriver();
+                break;
         
-        if(Environment.getProperties().browser().toString().toLowerCase().equals("firefox")){          
-
-            FirefoxOptions options = new FirefoxOptions();            
-            if(Environment.getProperties().headless()){
-                options.addArguments("--headless");
-            }
-            driver = new FirefoxDriver();
-
-        }else{
-
-            ChromeOptions options = new ChromeOptions();
-            if(Environment.getProperties().headless()){
-                options.addArguments("--headless");
-            }       
-            driver = new ChromeDriver(options);
-
-        }     
+            default:
+                ChromeOptions optionsChrome = new ChromeOptions();
+                if(Environment.getProperties().headless()){
+                    optionsChrome.addArguments("--headless");
+                }       
+                driver = new ChromeDriver(optionsChrome);
+                break;
+        }       
 
         driver.manage().window().maximize();
     }
 
-    @AfterClass
+    @AfterTest
     public void teardown() {
         driver.quit();
     }    

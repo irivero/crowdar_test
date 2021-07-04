@@ -9,7 +9,6 @@ import com.example.properties.Environment;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
-import java.util.function.IntPredicate;
 
 public class LoginPage extends AbstractPage<LoginPage> {
 

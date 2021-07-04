@@ -4,23 +4,31 @@ import com.example.pages.LoginPage;
 import com.example.properties.Environment;
 
 import org.assertj.core.api.Fail;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 
 
 public class AuthenticationTests extends TestBase {     
  
     private LoginPage loginPage;
 
+    @BeforeClass
+    public void init(){
+        loginPage = new LoginPage(driver);
+    }
+
+    @BeforeMethod
+    private void before(){        
+        loginPage.load();
+    }
+
     @Test (priority=1, description = "010: Autenticación (Despliegue de la vista de autenticación)")
     //010: Autenticación (Despliegue de la vista de autenticación)    
     public void verifyLoginPageAuthentication() {
-        try {
-
-            loginPage = new LoginPage(driver);  
-            loginPage.load();
+        try {             
             assertThat(loginPage.getUsernameInput().isDisplayed()).isTrue();
             assertThat(loginPage.getPasswordInput().isDisplayed()).isTrue();
             assertThat(loginPage.getLoginButton().isDisplayed()).isTrue();
@@ -51,7 +59,6 @@ public class AuthenticationTests extends TestBase {
             
             Fail.fail(e.getMessage());
         }
-
         
     }
     
@@ -72,7 +79,6 @@ public class AuthenticationTests extends TestBase {
             
             Fail.fail(e.getMessage());
         }
-
         
     }
 
@@ -91,9 +97,7 @@ public class AuthenticationTests extends TestBase {
             takeSnapShot("004-"+ System.currentTimeMillis() +".jpg");
             
             Fail.fail(e.getMessage());
-        }
-
-        
+        }        
     }
 
     @Test (priority=5, description = "005: Autenticación (con credenciales vacías)")
@@ -112,7 +116,6 @@ public class AuthenticationTests extends TestBase {
             
             Fail.fail(e.getMessage());
         }
-
         
     }
 
@@ -121,7 +124,6 @@ public class AuthenticationTests extends TestBase {
     public void verifyRedirectionToAuthentication() {
         try {
 
-            loginPage.load();
 
             driver.get(Environment.getProperties().url() + Environment.getProperties().home_page());            
             
@@ -187,9 +189,7 @@ public class AuthenticationTests extends TestBase {
             takeSnapShot("008-"+ System.currentTimeMillis() +".jpg");
             
             Fail.fail(e.getMessage());
-        }
-
-        
+        }        
     }
 
     @Test (priority=9, description = "009: Autenticación (contraseña incorrecta)" )
@@ -208,7 +208,6 @@ public class AuthenticationTests extends TestBase {
             
             Fail.fail(e.getMessage());
         }
-
         
     }    
 
@@ -257,12 +256,9 @@ public class AuthenticationTests extends TestBase {
 
     }
 
-
-
     private void typeCredentials(String username, String password){
         
-        loginPage.load();
-
+        
         if(username != null){
             loginPage.typeUsername(username);
         }
@@ -272,7 +268,5 @@ public class AuthenticationTests extends TestBase {
         }
 
         loginPage.clickLoginButton();
-    }
-
-    
+    }    
 }
