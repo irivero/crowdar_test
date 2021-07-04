@@ -70,12 +70,12 @@ public class LoginPage extends AbstractPage<LoginPage> {
     }   
     
 
-    @Step("Type Username")
+    @Step("Type Username {usernameText}")
     public void typeUsername(String usernameText) {
         username.sendKeys(usernameText);
     }
 
-    @Step("Type Password")
+    @Step("Type Password {passwordText}")
     public void typePassword(String passwordText) {
         password.sendKeys(passwordText);
     }

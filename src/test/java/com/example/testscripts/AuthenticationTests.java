@@ -8,13 +8,19 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Issue;
+import io.qameta.allure.Link;
+import io.qameta.allure.Story;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
+@Story("123-Authentication")
 public class AuthenticationTests extends TestBase {     
  
     private LoginPage loginPage;
 
+   
     @BeforeClass
     public void init(){
         loginPage = new LoginPage(driver);
@@ -146,6 +152,8 @@ public class AuthenticationTests extends TestBase {
         }
     }
 
+    @Issue("[Crowdar] No se muestra el loading en la vista de login si el proceso se demora")
+    @Link("https://github.com/irivero/crowdar_test/issues/1")
     @Test (priority=7, description = "007: Autenticación (problemas de performance)")
     //007: Autenticación (problemas de performance)
     public void verifyLoadingComponentAuthentication() {

@@ -1,6 +1,7 @@
 package com.example.testscripts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Attachment;
 
 import java.io.File;
 
@@ -10,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -86,8 +88,8 @@ abstract class TestBase {
      * @throws Exception
 
      */
-
-    protected void takeSnapShot(String fileWithPath){
+    @Attachment(value = "Page screenshot {fileWithPath}", type = "image/png")
+    protected byte[] takeSnapShot(String fileWithPath){
         try{
             TakesScreenshot scrShot =((TakesScreenshot)driver);
 
@@ -97,10 +99,15 @@ abstract class TestBase {
 
             FileUtils.copyFile(SrcFile, DestFile);
 
+            return scrShot.getScreenshotAs(OutputType.BYTES);
+
+        }catch(WebDriverException e){
+            e.printStackTrace(); 
 
         }catch(Exception e){
             e.printStackTrace(); 
-        }        
+        }
+        return null;        
     }   
 
 }
