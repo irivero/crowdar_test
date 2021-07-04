@@ -16,7 +16,7 @@
 
 `versions:update-properties`
 
-## Update configurations in 
+## Update configurations in test_environment.properties
 [src/main/resources/test_environment.properties](src/main/resources/test_environment.properties)
 
 #### Browser type
