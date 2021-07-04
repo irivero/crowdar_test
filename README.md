@@ -8,6 +8,11 @@
 
 `mvn allure:report`
 
+## Execute this for run test and generate the report 
+### Check WIKI for some examples
+
+`mvn clean test allure:report`
+
 ## Check for dependecy updates
 
 `mvn versions:display-dependency-updates`
