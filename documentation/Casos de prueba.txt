@@ -1,101 +1,101 @@
-*Casos de prueba*
+# Casos de prueba
 
-001: AutenticaciÛn (flujo b·sico)
-Prueba del flujo b·sico de autenticaciÛn con usuario y contraseÒa v·lidos. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 001: Autenticaci√≥n (flujo b√°sico)
+Prueba del flujo b√°sico de autenticaci√≥n con usuario y contrase√±a v√°lidos. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "standard_user" en el campo Username. 
-2. Introducir la contraseÒa ìsecret_sauceî en el campo Password. 
-3. Hacer click en el botÛn Login
+2. Introducir la contrase√±a ‚Äúsecret_sauce‚Äù en el campo Password. 
+3. Hacer click en el bot√≥n Login
 Resultados esperados
-       El usuario es redirigido a la p·gina principal de la aplicaciÛn 
+       El usuario es redirigido a la p√°gina principal de la aplicaci√≥n 
 
-002: AutenticaciÛn (usuario bloqueado)
-Prueba del flujo b·sico de autenticaciÛn con un usuario en estado bloqueado. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 002: Autenticaci√≥n (usuario bloqueado)
+Prueba del flujo b√°sico de autenticaci√≥n con un usuario en estado bloqueado. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "locked_out_user" en el campo Username. 
-2. Introducir la contraseÒa ìsecret_sauceî en el campo Password. 
-3. Hacer click en el botÛn Login
+2. Introducir la contrase√±a ‚Äúsecret_sauce‚Äù en el campo Password. 
+3. Hacer click en el bot√≥n Login
 Resultados esperados
        Se muestra un mensaje de error indicando el bloqueo del usuario
 	
-003: AutenticaciÛn (nombre de usuario vacÌo)
-Prueba del flujo b·sico de autenticaciÛn con el campo Username vacÌo. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 003: Autenticaci√≥n (nombre de usuario vac√≠o)
+Prueba del flujo b√°sico de autenticaci√≥n con el campo Username vac√≠o. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Introducir la contraseÒa ìsecret_sauceî en el campo Password. 
-2. Hacer click en el botÛn Login
+1. Introducir la contrase√±a ‚Äúsecret_sauce‚Äù en el campo Password. 
+2. Hacer click en el bot√≥n Login
 Resultados esperados
        Se muestra un mensaje de error indicando que el nombre de usuario es requerido
-SituaciÛn actual:
-	Se est· marcando como incorrecto el campo Password, pero solo deberÌa marcarse el de Username que es donde ocurre el problema.
+Situaci√≥n actual:
+	Se est√° marcando como incorrecto el campo Password, pero solo deber√≠a marcarse el de Username que es donde ocurre el problema.
 
-004: AutenticaciÛn (contraseÒa vacÌa)
-Prueba del flujo b·sico de autenticaciÛn con el campo Password vacÌo. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 004: Autenticaci√≥n (contrase√±a vac√≠a)
+Prueba del flujo b√°sico de autenticaci√≥n con el campo Password vac√≠o. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "locked_out_user" en el campo Username.  
-2. Hacer click en el botÛn Login
+2. Hacer click en el bot√≥n Login
 Resultados esperados
-       Se muestra un mensaje de error indicando que la contraseÒa es requerida
-SituaciÛn actual:
-	Se est· marcando como incorrecto el campo Username, pero solo deberÌa marcarse el de Password que es donde ocurre el problema.
+       Se muestra un mensaje de error indicando que la contrase√±a es requerida
+Situaci√≥n actual:
+	Se est√° marcando como incorrecto el campo Username, pero solo deber√≠a marcarse el de Password que es donde ocurre el problema.
 
-005: AutenticaciÛn (con credenciales vacÌas)
-Prueba del flujo b·sico de autenticaciÛn con las credenciales vacÌas. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 005: Autenticaci√≥n (con credenciales vac√≠as)
+Prueba del flujo b√°sico de autenticaci√≥n con las credenciales vac√≠as. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Hacer click en el botÛn Login
+1. Hacer click en el bot√≥n Login
 Resultados esperados
        Se muestra un mensaje de error indicando que el nombre de usuario es requerido
 
-006: AutenticaciÛn (RedirecciÛn a la vista de autenticaciÛn)
-Prueba de la verificaciÛn de permisos si el usuario no est· autenticado. (NOTA: en el navegador no debe existir ninguna sesiÛn activa)
+## 006: Autenticaci√≥n (Redirecci√≥n a la vista de autenticaci√≥n)
+Prueba de la verificaci√≥n de permisos si el usuario no est√° autenticado. (NOTA: en el navegador no debe existir ninguna sesi√≥n activa)
 Pasos
 1. Navegar a la URL https://www.saucedemo.com/inventory.html  
 Resultados esperados
-       El usuario es redirigido a la p·gina de autenticaciÛn mostrando un mensaje que indica al usuario que solo tiene acceso a la URL indicada si se autentica
-007: AutenticaciÛn (problemas de performance)
-Prueba del flujo b·sico de autenticaciÛn con problemas de performance en el sistema. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+       El usuario es redirigido a la p√°gina de autenticaci√≥n mostrando un mensaje que indica al usuario que solo tiene acceso a la URL indicada si se autentica
+## 007: Autenticaci√≥n (problemas de performance)
+Prueba del flujo b√°sico de autenticaci√≥n con problemas de performance en el sistema. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "performance_glitch_user" en el campo Username. 
-2. Introducir la contraseÒa ìsecret_sauceî en el campo Password. 
-3. Hacer click en el botÛn Login
+2. Introducir la contrase√±a ‚Äúsecret_sauce‚Äù en el campo Password. 
+3. Hacer click en el bot√≥n Login
 Resultados esperados
-       Se muestra un loading durante el proceso de verificaciÛn de las credenciales, seguidamente el usuario es redirigido a la p·gina principal de la aplicaciÛn 
-SituaciÛn actual:
-No se est· mostrando el componente de loading durante la verificaciÛn de las credenciales, por lo que da la idea de que el sistema no funciona por algunos segundos.
+       Se muestra un loading durante el proceso de verificaci√≥n de las credenciales, seguidamente el usuario es redirigido a la p√°gina principal de la aplicaci√≥n 
+Situaci√≥n actual:
+No se est√° mostrando el componente de loading durante la verificaci√≥n de las credenciales, por lo que da la idea de que el sistema no funciona por algunos segundos.
 
-008: AutenticaciÛn (nombre de usuario incorrecto)
-Prueba del flujo b·sico de autenticaciÛn con usuario incorrecto. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 008: Autenticaci√≥n (nombre de usuario incorrecto)
+Prueba del flujo b√°sico de autenticaci√≥n con usuario incorrecto. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "standarduser" en el campo Username. 
-2. Introducir la contraseÒa ìsecret_sauceî en el campo Password. 
-3. Hacer click en el botÛn Login
+2. Introducir la contrase√±a ‚Äúsecret_sauce‚Äù en el campo Password. 
+3. Hacer click en el bot√≥n Login
 Resultados esperados
-       Se muestra un mensaje de error indicando que no se encontrÛ ning˙n usuario con las credenciales proporcionadas 
+       Se muestra un mensaje de error indicando que no se encontr√≥ ning√∫n usuario con las credenciales proporcionadas 
 
-009: AutenticaciÛn (contraseÒa incorrecta)
-Prueba del flujo b·sico de autenticaciÛn con contraseÒa incorrecta. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 009: Autenticaci√≥n (contrase√±a incorrecta)
+Prueba del flujo b√°sico de autenticaci√≥n con contrase√±a incorrecta. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
 1. Introducir en nombre de usuario "standard_user" en el campo Username. 
-2. Introducir la contraseÒa ìsecretsauceî en el campo Password. 
-3. Hacer click en el botÛn Login
+2. Introducir la contrase√±a ‚Äúsecretsauce‚Äù en el campo Password. 
+3. Hacer click en el bot√≥n Login
 Resultados esperados
-       Se muestra un mensaje de error indicando que no se encontrÛ ning˙n usuario con las credenciales proporcionadas 
+       Se muestra un mensaje de error indicando que no se encontr√≥ ning√∫n usuario con las credenciales proporcionadas 
 
-010: AutenticaciÛn (Despliegue de la vista de autenticaciÛn)
-Prueba del flujo b·sico 
+## 010: Autenticaci√≥n (Despliegue de la vista de autenticaci√≥n)
+Prueba del flujo b√°sico 
 Pasos
 1. Introducir en el navegador la URL https://www.saucedemo.com/
  Resultados esperados
-Se debe mostrar la vista de autenticaciÛn con los campos para introducir el usuario y la contraseÒa, se debe mostrar el botÛn de autenticaciÛn. Adem·s debe aparecer el logo de la aplicaciÛn en la parte superior
+Se debe mostrar la vista de autenticaci√≥n con los campos para introducir el usuario y la contrase√±a, se debe mostrar el bot√≥n de autenticaci√≥n. Adem√°s debe aparecer el logo de la aplicaci√≥n en la parte superior
 
-011: AutenticaciÛn ñ Remover mensaje de error
-Prueba del flujo b·sico de autenticaciÛn con las credenciales vacÌas. El usuario debe acceder a la URL donde est· desplegado el sistema: https://www.saucedemo.com/
+## 011: Autenticaci√≥n ‚Äì Remover mensaje de error
+Prueba del flujo b√°sico de autenticaci√≥n con las credenciales vac√≠as. El usuario debe acceder a la URL donde est√° desplegado el sistema: https://www.saucedemo.com/
 Pasos
-1. Hacer click en el botÛn Login
+1. Hacer click en el bot√≥n Login
 Resultados esperados
        Se muestra un mensaje de error indicando que el nombre de usuario es requerido
-2. Hacer click en el botÛn de cerrar del mensaje de error
+2. Hacer click en el bot√≥n de cerrar del mensaje de error
 
 Resultados esperados
-	Se debe remover el mensaje de error de la vista y las marcas de error en los campos de usuario y contraseÒa
+	Se debe remover el mensaje de error de la vista y las marcas de error en los campos de usuario y contrase√±a
 	
 
