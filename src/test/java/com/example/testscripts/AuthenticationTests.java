@@ -153,16 +153,16 @@ public class AuthenticationTests extends TestBase {
                 typeCredentials(Environment.getProperties().username(),Environment.getProperties().password());
                 assertThat(loginPage.getLoading().isDisplayed()).isTrue();
 
-                synchronized (driver)
+                /*synchronized (driver)
                     {
                         
                         driver.wait(1000);
                     
-                    }  
+                    }  */
 
                 assertThat(driver.getCurrentUrl()).isEqualTo(Environment.getProperties().url() + Environment.getProperties().home_page());
 
-            } catch (InterruptedException e) {
+            //} catch (InterruptedException e) {
                                
             }
             catch(Exception e2){
@@ -244,15 +244,11 @@ public class AuthenticationTests extends TestBase {
 
             assertThat(loginPage.getPasswordErrorInput().isDisplayed()).isTrue();
 
+            assertThat(loginPage.getErrorMessageComponents().size()).isEqualTo(4);
+
             loginPage.clickCloseErrorMessage();
 
-            assertThat(loginPage.getErrorMessage().isDisplayed()).isFalse();
-
-            assertThat(loginPage.getUsernameErrorInput().isDisplayed()).isFalse();
-
-            assertThat(loginPage.getPasswordErrorInput().isDisplayed()).isFalse();
-            
-            
+            assertThat(loginPage.getErrorMessageComponents().size()).isEqualTo(0);
         }
         catch(Exception e){
             takeSnapShot("011-"+ System.currentTimeMillis() +".jpg");

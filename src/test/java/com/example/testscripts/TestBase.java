@@ -30,13 +30,14 @@ abstract class TestBase {
     @BeforeClass
     public void setup() {
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
-        //options.addArguments("--maximize");
+        //options.addArguments("--headless");        
         driver = new ChromeDriver(options);
 
         //FirefoxOptions options = new FirefoxOptions();
         //options.addArguments("--headless");
         //driver = new FirefoxDriver();
+
+        driver.manage().window().maximize();
 
     }
 

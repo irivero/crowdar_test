@@ -8,6 +8,9 @@ import com.example.properties.Environment;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
+import java.util.function.IntPredicate;
+
 public class LoginPage extends AbstractPage<LoginPage> {
 
     @FindBy(xpath = "//input[@data-test='username']")
@@ -26,7 +29,7 @@ public class LoginPage extends AbstractPage<LoginPage> {
     @FindBy(xpath = "//input[@data-test='login-button']")
     private WebElement loginButton;
 
-    @FindBy(className =  "svg-inline--fa fa-times fa-w-11")
+    @FindBy(className = "error-button")
     private WebElement xErrorMessage;
 
     @FindBy(className = "login_logo")
@@ -34,6 +37,9 @@ public class LoginPage extends AbstractPage<LoginPage> {
 
     @FindBy(className = "loading")
     private WebElement loading;
+
+    @FindBy(xpath = "//div[@class='error-message-container error']//*")
+    private List<WebElement> errorElements; 
 
     @FindBy(xpath = "//h3[@data-test='error']")
     private WebElement errorMessage;
@@ -141,6 +147,10 @@ public class LoginPage extends AbstractPage<LoginPage> {
     
     public WebElement getPasswordErrorInput() {
         return username_error;
+    }
+
+    public List<WebElement> getErrorMessageComponents() {
+        return errorElements;
     }
 
    

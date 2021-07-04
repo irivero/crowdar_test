@@ -10,7 +10,7 @@
 
 ## or
 
-allure serve 
+`allure serve` 
 
 ## Check for dependecy updates
 
