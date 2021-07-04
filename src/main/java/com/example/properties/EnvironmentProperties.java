@@ -11,7 +11,11 @@ public interface EnvironmentProperties extends Config {
 
     String username();
 
-    String password();
+    String password();  
 
     String username_locked();
+
+    String browser();
+
+    Boolean headless();
 }

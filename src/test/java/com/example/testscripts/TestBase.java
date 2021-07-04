@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.io.File;
 
+import com.example.properties.Environment;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,13 +31,25 @@ abstract class TestBase {
 
     @BeforeClass
     public void setup() {
-        ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");        
-        driver = new ChromeDriver(options);
 
-        //FirefoxOptions options = new FirefoxOptions();
-        //options.addArguments("--headless");
-        //driver = new FirefoxDriver();
+        if(Environment.getProperties().browser() == "firefox"){
+
+
+            FirefoxOptions options = new FirefoxOptions();            
+            if(Environment.getProperties().headless()){
+                options.addArguments("--headless");
+            }
+            driver = new FirefoxDriver();
+
+        }else{
+
+            ChromeOptions options = new ChromeOptions();
+            if(Environment.getProperties().headless()){
+                options.addArguments("--headless");
+            }       
+            driver = new ChromeDriver(options);
+
+        }     
 
         driver.manage().window().maximize();
 
