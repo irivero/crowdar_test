@@ -5,7 +5,6 @@
 `mvn test`
 
 ## Generate report
-### You can use IIS for deploy the result locally
 
 `mvn allure:report`
 
@@ -18,4 +17,4 @@
 `versions:update-properties`
 
 ## update configurations in 
-### src/main/resources/test_environment.properties
+[src/main/resources/test_environment.properties](src/main/resources/test_environment.properties)
