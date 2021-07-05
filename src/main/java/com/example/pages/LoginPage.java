@@ -14,16 +14,9 @@ public class LoginPage extends AbstractPage<LoginPage> {
 
     @FindBy(xpath = "//input[@data-test='username']")
     private WebElement username;
-
-    @FindBy(xpath = "//input[@data-test='username' and @class='input_error form_input error']"    )
-    private WebElement username_error;
     
     @FindBy(xpath = "//input[@data-test='password']")
     private WebElement password;
-
-    @FindBy(xpath = "//input[@data-test='password' and @class='input_error form_input error']"    )
-    private WebElement password_error;
-
 
     @FindBy(xpath = "//input[@data-test='login-button']")
     private WebElement loginButton;
@@ -137,15 +130,6 @@ public class LoginPage extends AbstractPage<LoginPage> {
 
     public WebElement getLoading() {
         return loading;
-    }
-
-    public WebElement getUsernameErrorInput() {
-        return username_error;
-    }
-
-    
-    public WebElement getPasswordErrorInput() {
-        return username_error;
     }
 
     public List<WebElement> getErrorMessageComponents() {

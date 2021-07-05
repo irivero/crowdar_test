@@ -247,9 +247,9 @@ public class AuthenticationTests extends TestBase {
 
             assertThat(loginPage.getErrorMessage().isDisplayed()).isTrue();
 
-            assertThat(loginPage.getUsernameErrorInput().isDisplayed()).isTrue();
+            assertThat(loginPage.getUsernameInput().getAttribute("class")).contains("input_error form_input error");
 
-            assertThat(loginPage.getPasswordErrorInput().isDisplayed()).isTrue();
+            assertThat(loginPage.getPasswordInput().getAttribute("class")).contains("input_error form_input error");
 
             assertThat(loginPage.getErrorMessageComponents().size()).isEqualTo(4);
 
